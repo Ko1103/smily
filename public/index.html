@@ -4,39 +4,72 @@
   <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>smily Sample</title>
-     <link rel="stylesheet" type="css" href="css/header.css">
-    <link rel="stylesheet" type="css" href="css/index.css" >
-    <style></style>
-    <!-- BootstrapのCSS読み込み -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- jQuery読み込み -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- BootstrapのJS読み込み -->
-    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<!-- <link rel="stylesheet" type="text/css" href="public/css/header.css">
+<link rel="stylesheet" type="text/css" href="public/css/index.css" >
  </head>
  <body>
    <header>
-     <ul class= "header_menu">
-     <li>一発ギャグ</li>
-     <li>モノマネ</li>
-     <li>ショートコント</li>
-     <li>モノボケ</li>
-     <li>サイレント</li>
-   </ul>
-     <h1></h1>
+     <nav class="navbar navbar-default" role="navigation">
+ 	<div class="container-fluid">
+ 		<!-- スマートフォンサイズで表示されるメニューボタンとテキスト -->
+ 		<div class="navbar-header">
+ 		<!-- メニューボタン
+         data-toggle : ボタンを押したときにNavbarを開かせるために必要
+         data-target : 複数navbarを作成する場合、ボタンとナビを紐づけるために必要
+       	-->
+ 		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-menu-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
 
+ 		<!-- タイトルなどのテキスト -->
+ 		<a class="navbar-brand" href="#">smisly</a></div>
+
+ 		<!-- グローバルナビの中身 -->
+ 		<div class="collapse navbar-collapse" id="nav-menu-1">
+ 			<!-- 各ナビゲーションメニュー -->
+ 			<ul class="nav navbar-nav">
+ 				<!-- 通常のリンク -->
+ 				<li class="active"><a href="#">一発ギャグ</a></li>
+ 				<li><a href="#">モノマネ</a></li>
+        <li><a href="#">ショートコント</a></li>
+ 				<li><a href="#">モノボケ</a></li>
+        <li><a href="#">サイレント</a></li>
+ 				<!-- ドロップダウンのメニューも配置可能 -->
+ 				<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">ドロップダウン <b class="caret"></b></a>
+ 					<ul class="dropdown-menu">
+ 						<li><a href="#">ドロップダウン1</a></li>
+ 						<li><a href="#">ドロップダウン2</a></li>
+ 						<li><a href="#">ドロップダウン3</a></li>
+ 						<li class="divider"></li>
+ 						<li><a href="#">ドロップダウン4</a></li>
+ 						<li class="divider"></li>
+ 						<li><a href="#">ドロップダウン5</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 		</div>
+ 	</div>
+ </nav>
    </header>
 
-   <footer></footer>
    <a class="btn btn-default">default</a>
-   <!--ここら辺にヘッダーのを書く-->
 
    <p class="bg-primary">bg-primary</p>
 
 
-
-   <video id="myVideo" width="400" height="300" autoplay="1" ></video>
+   <img src="http://192.168.100.102:8000/?action=stream"/>
+   <video id="myVideo" width="600" height="400" autoplay="1" style="float:left"></video>
 
    <script type="text/javascript">
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || window.navigator.mozGetUserMedia;
@@ -56,12 +89,34 @@
    </script>
 
    <!--ここに右に表示するランキングの写真を３つ書く-->
-
+   <div style="float:none">
+   <img src="staff2.jpeg" alt="写真1">
+   <img src="staff2.jpeg" alt="写真2">
+   <img src="staff2.jpeg" alt="写真3">
+   <div>
 
    <!--動画の下のラベル-->
-
-
+   <div class="progress" style="margin-left:30px; margin-top:400px; width:600px; clear:both">
+     <div class="progress-bar" style="width: 60%;"></div>
+   </div>
 
    <!--人の顔を並べる-->
+   <div style="boorder-radius: 30px; float:left; border: 1px solid #CCCCCC;
+08
+    padding: 5px 10px;
+09
+    text-align: left;
+    margin-left:30px;
+    width: 80%;
+    height: 200px;
+    margin-bottom:100px
+    ">
+   <img src="photos/staff2.jpeg" alt="写真1">
+   <img src="staff2.jpeg" alt="写真2">
+   <img src="staff2.jpeg" alt="写真3">
+ </div>
+
+ <footer style="background-color: red;
+ height: 50px"></footer>
  </body>
 </html>
