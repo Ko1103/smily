@@ -1,0 +1,11 @@
+ul.header_menu {
+  border:0px;
+  padding:0px;
+  margin-top: 24px
+}
+ul.header_menu li {
+  display: inline-block;
+  font-size:15px;
+  float : left;
+  height: auto
+}
