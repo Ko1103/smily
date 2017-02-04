@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/Ko1103/smily/issues"
   },
-  "homepage": "https://github.com/Ko1103/smily#readme"
+  "homepage": "https://github.com/Ko1103/smily#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "http": "0.0.0"
+  }
 }
