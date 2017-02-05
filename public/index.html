@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
   <head>
@@ -8,7 +9,7 @@
     <title>smily~ make u laugh ~</title>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <!-- Latest compiled and minified JavaScript -->
@@ -19,6 +20,7 @@
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://skyway.io/dist/0.3/peer.min.js"></script>
     <script src="https://skyway.io/dist/multiparty.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js" type="text/javascript"></script>
     <style> video { width:200px; } </style>
     <script>
       // MultiParty インスタンスを生成
@@ -40,6 +42,7 @@
       // サーバとpeerに接続
       multiparty.start()
     </script>
+
   </head>
   <body>
    <header>
@@ -79,20 +82,27 @@
         </div>
       </nav>
     </header>
-    <p class="bg-primary" style="background-color:#CCCCCC;height: 50px"></p>
-    <div >
-      <div id="myVideo" width="600" height="400" autoplay="1" style=" margin-left:300px; float:left">
+
+    <div style="margin-left:30px; margin-right:30px">
+      <div id="myVideo" width="600" height="400" autoplay="1" style=" margin-left:100px; float:left">
         <img src="http://192.168.100.102:8000/?action=stream"/>
-        <div id="streams" style="width:180; margin-top:20px; margin-right:20px; webkit-border-radius: 5px;"></div>
+        <div style=" background: -webkit-linear-gradient(top, #fff 0%, #f0f0f0 100%);
+           background: linear-gradient(to bottom, #fff 0%, #f0f0f0 100%);
+           border: 1px solid #ccc;
+           border-top: 4px solid #1c66fe ;
+           box-shadow: 0 -1px 0 rgba(255, 255, 255, 1) inset;
+           margin: 2em 0;
+           width: 350px;
+           height: 230px;
+           padding: 2em;
+           ">
+          <div id="streams" style="width:100%; margin-top:20px; float:left"></div>
+          <h3 style=" color: #1c66fe " >Kenji</h3>
+        </div>
       </div>
-    <div>
     <!--ここに右に表示するランキングの写真を３つ書く-->
     <div id="ranking" style=" margin-right:70px; margin-top:20px; float:right">
       <ul>ランキング</ul>
-      <!-- <img src="staff2.jpeg" alt="写真1">
-      <img src="staff2.jpeg" alt="写真2">
-      <img src="staff2.jpeg" alt="写真3"> -->
-
       <table class="table table-hover">
       	<thead>
       		<tr>
@@ -158,25 +168,11 @@
 
     </div>
     <!--動画の下のラベル-->
-    <div class="progress" style="margin-left:300px; margin-top:20px; width:600px; clear:both">
-      <div class="progress-bar" style="width: 50%;"></div>
+      <div class="progress" style="margin-left:100px; margin-top:20px; width:600px; clear:both">
+        <div class="progress-bar" style="width: 50%;"></div>
+      </div>
     </div>
-
-    <!--人の顔を並べる-->
-    <!-- <div style="boorder-radius: 30px; float:left; border: 1px solid #CCCCCC; -->
-      <!-- 08
-      padding: 5px 10px;
-      09
-      text-align: left;
-      margin-left:30px;
-      width: 80%;
-      height: 200px;
-      margin-bottom:100px
-      "> -->
-     <!-- <img src="photos/staff2.jpeg" alt="写真1">
-     <img src="staff2.jpeg" alt="写真2">
-     <img src="staff2.jpeg" alt="写真3">
-    </div> -->
-    <footer style="background-color:#CCCCCC;height: 50px"></footer>
+    <footer style="background-color:#CCCCCC;height: 50px">
+    </footer>
    </body>
 </html>
